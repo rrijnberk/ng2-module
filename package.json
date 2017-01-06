@@ -1,0 +1,56 @@
+{
+  "name": "@rrijnberk/generic-components",
+  "version": "0.1.0",
+  "description": "An example repository for building your own Angular 2 library",
+  "main": "./src/components.module.js",
+  "typings": "./src/components.module.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrijnberk/ng2-module.git"
+  },
+  "keywords": [
+    "Angular",
+    "Angular 2",
+    "Library"
+  ],
+  "author": "r.rijnberk@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rrijnberk/ng2-module/issues"
+  },
+  "homepage": "https://github.com/rrijnberk/ng2-module/#readme",
+  "dependencies": {
+    "@angular/common": "2.4.1",
+    "@angular/compiler": "2.4.1",
+    "@angular/core": "2.4.1",
+    "@angular/forms": "2.4.1",
+    "@angular/http": "2.4.1",
+    "@angular/platform-browser": "2.4.1",
+    "@angular/platform-browser-dynamic": "2.4.1",
+    "@angular/router": "3.4.1",
+    "core-js": "2.4.1",
+    "reflect-metadata": "0.1.9",
+    "rxjs": "5.0.2",
+    "zone.js": "0.7.2"
+  },
+  "devDependencies": {
+    "@types/core-js": "0.9.35",
+    "@types/node": "6.0.54",
+    "angular2-template-loader": "0.6.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "file-loader": "0.9.0",
+    "html-loader": "0.4.4",
+    "html-webpack-plugin": "^2.24.1",
+    "jasmine-core": "2.5.2",
+    "json-loader": "0.5.4",
+    "null-loader": "0.1.1",
+    "raw-loader": "0.5.1",
+    "rimraf": "2.5.4",
+    "ts-helpers": "1.1.2",
+    "tslint": "4.2.0",
+    "tslint-loader": "3.3.0",
+    "typedoc": "0.5.1",
+    "typescript": "2.1.4"
+
+  }
+}

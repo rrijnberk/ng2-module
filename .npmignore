@@ -1,0 +1,9 @@
+node_modules
+
+.npmignore
+
+ng-module.iml
+
+tsconfig.json
+typedoc.json
+webpack.config.js
