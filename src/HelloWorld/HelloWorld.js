@@ -12,7 +12,7 @@ var HelloWorldComponent = (function () {
     HelloWorldComponent = __decorate([
         core_1.Component({
             selector: 'rr-helloworld',
-            template: '<h1>Hello world from module</h1>'
+            templateUrl: './HelloWorld.html'
         })
     ], HelloWorldComponent);
     return HelloWorldComponent;
