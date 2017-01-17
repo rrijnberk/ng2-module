@@ -1,0 +1,18 @@
+{
+  "mode": "file",
+  "out": "build/docs",
+  "theme": "./node_modules/angular2-typedoc-theme",
+  "ignoreCompilerErrors": "true",
+  "experimentalDecorators": "true",
+  "emitDecoratorMetadata": "true",
+  "target": "ES5",
+  "moduleResolution": "node",
+  "preserveConstEnums": "true",
+  "stripInternal": "true",
+  "suppressExcessPropertyErrors": "true",
+  "suppressImplicitAnyIndexErrors": "true",
+  "module": "commonjs",
+  "src": "./src/**/*.ts",
+  "externalPattern": "**/docs/**/*.ts",
+  "excludeExternals": true
+}

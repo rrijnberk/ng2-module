@@ -21,7 +21,36 @@
   "homepage": "https://github.com/rrijnberk/ng2-module/#readme",
   "dependencies": {
     "@angular/core": "2.4.1",
+    "@rrijnberk/alternative-components": "^0.1.0",
+    "core-js": "2.4.1",
+    "reflect-metadata": "0.1.9",
     "rxjs": "5.0.2",
     "zone.js": "0.7.2"
+  },
+  "devDependencies": {
+    "@angular/common": "^2.4.1",
+    "@angular/compiler": "^2.4.1",
+    "@angular/http": "^2.4.1",
+    "@angular/platform-browser": "^2.4.1",
+    "@angular/platform-browser-dynamic": "^2.4.1",
+    "@angular/router": "^3.4.1",
+    "@types/core-js": "0.9.35",
+    "@types/node": "6.0.54",
+    "angular2-template-loader": "0.6.0",
+    "angular2-typedoc-theme": "../angular2-typedoc-theme",
+    "awesome-typescript-loader": "^3.0.0-beta.17",
+    "copy-webpack-plugin": "^4.0.1",
+    "raw-loader": "^0.5.1",
+    "ts-helpers": "1.1.2",
+    "typedoc": "0.5.3",
+    "typedoc-default-themes": "0.4.2",
+    "typescript": "2.1.4",
+    "webpack": "2.1.0-beta.28",
+    "webpack-archive-plugin": "2.0.0",
+    "webpack-dev-server": "2.1.0-beta.12",
+    "webpack-shell-plugin": "^0.5.0"
+  },
+  "scripts": {
+    "docs": "typedoc --options typedoc.json"
   }
 }
