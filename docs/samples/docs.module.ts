@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {HttpModule} from '@angular/http';
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 
-import {ComponentsModule} from '../../src/components.module';
+import {ComponentsModule} from '../../src/app/components.module';
 
 import {DocumentApp} from './docs.component';
 import {DocSampleComponent} from './support/doc-sample.component';
@@ -11,11 +11,14 @@ import {DocSampleComponent} from './support/doc-sample.component';
 import {HelloWorldComponent_Sample} from './HelloWorld/default.sample';
 import {HelloWorldComponent_Sample_Spiffy} from './HelloWorld/spiffy.sample';
 
+import {TodoComponent_Sample} from './todo/default.sample';
+
 import {routing} from './docs.routing';
 
 const samples = [
     HelloWorldComponent_Sample,
-    HelloWorldComponent_Sample_Spiffy
+    HelloWorldComponent_Sample_Spiffy,
+    TodoComponent_Sample
 ];
 
 @NgModule({

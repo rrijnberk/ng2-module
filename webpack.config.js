@@ -32,8 +32,8 @@ const copyPlugin = new CopyWebpackPlugin([{
 const shellPlugin = new WebpackShellPlugin({
     onBuildStart: [
         'echo Start build',
-        'rm -rf build/docs',
-        'yarn docs'
+        'rm -rf documentation',
+        'npm run compodoc'
     ],
     onBuildEnd: [
         'echo End build'
@@ -54,12 +54,12 @@ module.exports = {
     entry: {
         polyfills: './resource/polyfills',
         vendor: './resource/vendor',
-        app: './src/components.module',
+        app: './src/app/components.module',
         docs: './docs/samples/docs.module'
     },
 
     output: {
-        path: path.resolve(__dirname, "build/docs/example/assets"),
+        path: path.resolve(__dirname, "documentation/example/assets"),
         publicPath: "/example/assets/",
         filename: "[name].bundle.js",
         sourceMapFilename: '[name].map',
@@ -90,7 +90,7 @@ module.exports = {
     plugins: plugins,
 
     devServer: {
-        contentBase: './build/docs',
+        contentBase: './documentation',
         inline: true,
         port: 3000
     }

@@ -10,7 +10,7 @@ var server = app.listen(app.get('port'), function() {
 
 
     // app.use('/example/assets', express.static(__dirname + '/dist'));
-    app.use(express.static(__dirname + '/build/docs'));
+    app.use(express.static(__dirname + '/documentation/'));
 
-    console.log('Magic happens on port ' + port);
+    console.log('Documentation is now visible on http://localhost:' + port);
 });

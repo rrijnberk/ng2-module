@@ -1,0 +1,13 @@
+<div class="todo">
+    <div class="todo__controls">
+        <input type="text" [(ngModel)]="newItem"/>
+        <button type="button" (click)="add()">add</button>
+    </div>
+    <div class="todo__list">
+        <rr-todo-list [items]="_checklist">
+        </rr-todo-list>
+    </div>
+    <div class="todo__footer">
+        <button type="button" (click)="update()">store</button>
+    </div>
+</div>
