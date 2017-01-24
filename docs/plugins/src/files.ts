@@ -1,15 +1,17 @@
 const glob = require("glob");
 const fs = require('fs');
 
+class StackItem {
+    public call: string;
+    public callback: Function;
+}
 
-
-
-function Files(config) {
+function FilesFn(config) {
     const local = this;
     const globPattern = `${config.src}/**/*.${config.ext}`.replace('//', '/');
     const options = {};
     let files = [];
-    let stack = [];
+    let stack = new Array<StackItem>();
 
     glob(globPattern, options, (er, results) => {
         if(er) {
@@ -21,7 +23,7 @@ function Files(config) {
         let promises = results.map(getFileContent);
 
         Promise.all(promises).then((data) => {
-            stack.forEach((request) => {
+            stack.forEach((request: StackItem) => {
                 data = data[request.call](request.callback);
             });
 
@@ -39,10 +41,6 @@ function Files(config) {
         stack.push({ call: 'filter', callback });
         return this;
     };
-
-    this.write = () => {
-        stack.push({ call: 'write' })
-    }
 }
 
 function getFileContent(file) {
@@ -66,4 +64,4 @@ function setFileContent(file) {
     });
 }
 
-module.exports = Files;
+module.exports = FilesFn;

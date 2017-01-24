@@ -9,13 +9,9 @@ import {SelectableItem} from "../models/item.model";
     templateUrl: './todo.component.html'
 })
 export class TodoComponent {
-    public _checklist: Array<SelectableItem>;
+    public _checklist: Array<SelectableItem> = [];
     public newItem: string;
     @Output() checklistChange = new EventEmitter();
-
-    constructor() {
-        console.log('Hello')
-    }
 
     @Input('checklist')
     set checklist(checklist: Array<string>) {
@@ -41,10 +37,10 @@ export class TodoComponent {
             this._checklist.push(new SelectableItem(newItem));
             this.newItem = '';
         }
-    }
+    };
 
-    update = (override: Array<string>) => {
-        this.checklistChange.emit(override ? override : this.checklist);
-    }
+    update = () => {
+        this.checklistChange.emit(this.checklist);
+    };
 
 }

@@ -23,7 +23,6 @@
   },
 
   "exclude": [
-    "docs",
     "node_modules",
     "typings/main",
     "typings/main.d.ts"

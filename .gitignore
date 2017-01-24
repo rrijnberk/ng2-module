@@ -1,9 +1,12 @@
 documentation
 .iml
 .sh
+
 src/**/*.js
 src/**/*.js.map
+
 docs/**/*.js
 docs/**/*.js.map
+
 test/**/*.js
 test/**/*.js.map

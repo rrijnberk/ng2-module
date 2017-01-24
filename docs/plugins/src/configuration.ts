@@ -4,7 +4,7 @@ const DEFAULTS = {
     prefix: '/example/#'
 };
 
-const Configuration = (args) =>  {
+const ConfigurationFn = (args) =>  {
     let config;
     const processArguments = (args) => {
         let config = {};
@@ -41,4 +41,4 @@ const Configuration = (args) =>  {
     return config;
 };
 
-module.exports = Configuration;
+module.exports = ConfigurationFn;

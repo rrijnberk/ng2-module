@@ -40,12 +40,23 @@ const shellPlugin = new WebpackShellPlugin({
     ]
 });
 
-const plugins = [
-    shellPlugin,
-    copyPlugin,
-    commonChunksPlugin,
-    contextReplacementPlugin
-];
+/**
+ * Env
+ * Get npm lifecycle event to identify the environment
+ */
+var ENV = process.env.npm_lifecycle_event;
+var isTestWatch = ENV === 'test-watch';
+var isTest = ENV === 'test' || 'karma' || isTestWatch;
+var isProd = ENV === 'build';
+
+const plugins = [];
+
+console.log('>>>>> ', process.env.npm_lifecycle_event, ' <<<<<');
+
+if(!isTest) plugins.push(shellPlugin);
+plugins.push(copyPlugin);
+if(!isTest) plugins.push(commonChunksPlugin);
+plugins.push(contextReplacementPlugin);
 
 
 module.exports = {
@@ -78,7 +89,8 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+                loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
+                exclude: [isTest ? /\.(e2e)\.ts$/ : /\.(spec|e2e)\.ts$/, /node_modules\/(?!(ng2-.+))/]
             }, {
                 test: /\.html$/,
                 loader: 'raw-loader',
