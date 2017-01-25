@@ -6,6 +6,7 @@ import {SelectableItem} from "../models/item.model";
  */
 @Component({
     selector: 'rr-todo-list-option',
+    styleUrls: ['./option.component.scss'],
     templateUrl: './option.component.html'
 })
 export class TodoListOptionComponent {

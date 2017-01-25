@@ -1,0 +1,18 @@
+$todo-list-border: 1px solid;
+
+ul {
+  list-style-type: none;
+  border: $todo-list-border;
+  border-radius: 0.8rem;
+  padding: 0;
+
+
+  & > li {
+    height: 2rem;
+    padding-left: 1.4rem;
+
+    &:not(:last-child) {
+      border-bottom: $todo-list-border;
+    }
+  }
+}

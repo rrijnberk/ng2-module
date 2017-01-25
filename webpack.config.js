@@ -55,7 +55,7 @@ console.log('>>>>> ', process.env.npm_lifecycle_event, ' <<<<<');
 
 if(!isTest) plugins.push(shellPlugin);
 plugins.push(copyPlugin);
-if(!isTest) plugins.push(commonChunksPlugin);
+plugins.push(commonChunksPlugin);
 plugins.push(contextReplacementPlugin);
 
 
@@ -95,6 +95,12 @@ module.exports = {
                 test: /\.html$/,
                 loader: 'raw-loader',
                 exclude: root('src', 'public')
+            }, {
+                test: /\.scss$/,
+                loaders: ["raw-loader", "sass-loader"]
+            }, {
+                test: /\.css$/,
+                loaders: ["raw-loader"]
             }
         ]
     },
